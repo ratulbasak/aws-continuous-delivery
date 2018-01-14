@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html/
+  - source: /nginx.conf
+    destination: /etc/nginx/sites-enabled/default
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
