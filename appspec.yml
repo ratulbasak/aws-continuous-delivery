@@ -4,7 +4,7 @@ files:
   - source: /index.html
     destination: /var/www/html/
   - source: /nginx.conf
-    destination: /etc/nginx/sites-enabled/default
+    destination: /etc/nginx/sites-enabled/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
