@@ -5,13 +5,14 @@ phases:
     commands:
       - echo Entered the install phase...
       - apt-get update -y
-      - apt-get install -y nginx
+      - apt-get install -y nginx curl
   build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
       - cp ./nginx.conf /etc/nginx/sites-enabled/
       - service nginx restart
+      - curl localhost
   post_build:
     commands:
       - echo Entered the post_build phase...
